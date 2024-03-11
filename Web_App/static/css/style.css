@@ -1,0 +1,46 @@
+.navbar {
+    background-color:#38a8f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/imagini/inginerie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 600px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; /* Adjust the value to move the image down */
+    
+}
+
+h1 {
+    font-size: 100px; 
+    color: rgb(255, 255, 255);/* or any size you prefer */
+  }
+  
+p {
+    font-size: 40px; 
+    color: rgb(255, 255, 255);/* or any size you prefer */
+  }
+
+.h-text button {
+    background-color: #0060df;
+    color: white;
+    margin-top: 16px ;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
