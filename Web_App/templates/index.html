@@ -1,15 +1,194 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block content %}
-<div class="container">
-<div class="h-image">
-    <div class="h-text">
-      <h1>Welcome to our university</h1>
-      <p>Do you need any help?</p>
-      <button>Read more...</button>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.83.1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/login.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/lang.css')}}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='js/read_more.js')}}" rel="stylesheet"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+  <title>{% block title %}Index{% endblock %}</title>
+
+  <style>
+    h1 {
+      font-size: 89px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: oblique;
+      color: azure;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: oblique;
+      color: azure;
+    }
+
+    #introducere {
+      background-color: rgba(0, 0, 0, 0.0);
+      color: wheat;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    #introducere h2 {
+      color: rgb(94, 184, 106);
+      -webkit-text-stroke: 1px  rgb(125, 172, 82); /* width and color */
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    #istorie {
+      background-color: rgba(0, 0, 0, 0.0);
+      color: wheat;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #istorie h2 {
+      color: tomato;
+      -webkit-text-stroke: 1px  rgb(190, 113, 77); /* width and color */
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    #inginerie {
+      background-color: rgba(0, 0, 0, 0.0);
+      color: wheat;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #inginerie h2 {
+      color: rgb(37, 68, 172);
+      -webkit-text-stroke: 1px  rgb(82, 173, 201); /* width and color */
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    #misiune {
+      background-color: rgba(0, 0, 0, 0.0);
+      color: wheat;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #misiune h2 {
+      color: rgb(213, 221, 93);
+      -webkit-text-stroke: 1px  rgb(216, 213, 51); /* width and color */
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    footer {
+      background-color: rgba(16, 118, 202, 0.1);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+
+    #read-more-btn {
+      display: block;
+      background-color: #4259be;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 26px;
+      width: 300px;
+    }
+
+    .hidden-content {
+      display: none;
+      margin-top: 100px;
+    }
+
+    #top-left-text {
+      position: absolute;
+      top: 170px;
+      left: 0;
+      padding: 10px;
+    }
+
+    p{
+      font-size: 17px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: normal;
+      color: azure;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+  <div id="top-left-text">
+    <h1>{{ _("Bun venit la Universitatea Vasile Alecsandri").split(',')[0].strip() }}!</h1>
+    <button id="read-more-btn">About University</button>
   </div>
+  <div class="hidden-content" id="hidden-content">
+    <section id="introducere">
+      <h2>Despre universitate</h2>
+      <p>Universitatea "Vasile Alecsandri" din Bacău este una dintre instituțiile de învățământ superior importante din
+        România, situată în municipiul Bacău, în regiunea Moldovei.
+        <br> Universitatea își trage numele faimosului poet român Vasile Alecsandri, care a contribuit semnificativ la
+        dezvoltarea culturii și literaturii române reflectând astfel angajamentul său față de promovarea valorilor
+        culturale și educaționale.</br>
+      </p>
+    </section>
+
+
+    <section id="istorie">
+      <h2>Istoria universitatii</h2>
+      <p>Universitatea "Vasile Alecsandri" a fost fondata in 1990. Axata initial pe 2 facultati: Facultatea de Inginerie
+        şi, respectiv, Facultatea de Litere şi Ştiinţe, universitatea s-a extins de atunci ajungând sa cuprinda 5
+        facultati oferind programe de licență, masterat și doctorat într-o varietate de domenii, cum ar fi inginerie,
+        stiinte economice, științe umaniste si sociale, stiinte ale miscarii si sportului si multe altele. Din 13
+        octombrie 2009, Universitatea din Bacău îşi schimbă denumirea în Universitatea „Vasile Alecsandri” din Bacău.
+        <br> De asemenea, universitatea oferă o gamă largă de programe de cercetare și dezvoltare, precum și programe de
+        formare profesională și didactica.</br>
+      </p>
+    </section>
+
+    <style></style>
+
+    <section id="inginerie">
+      <h2>Facultatea de Inginerie</h2>
+      <p>Facultatea de Inginerie din cadrul Universității "Vasile Alecsandri" din Bacău ofera programe de studiu în
+        domenii variate ale ingineriei. Printre domeniile de studiu oferite se numără ingineria mecanică, ingineria
+        electrică, ingineria în construcții, ingineria industrială, ingineria mediului și altele. Programul de studii
+        este conceput pentru a dezvolta competențele practice și tehnice ale studenților, oferindu-le cunoștințe solide
+        în domeniul lor de specializare, precum și o înțelegere amplă a principiilor ingineriei.
+        <br> De asemenea facultatea dispune de aparatura si laboratoare speciale pentru a oferi studentilor o experineta
+        de invatare cat mai completa si relevanta. Studentii pot beneficia de stagii de practică și oportunități de
+        angajare în domeniul ingineriei prin colaborările cu industria și mediul de afaceri a facultatii.</br>
+      </p>
+    </section>
+
+    <section id="misiune">
+      <h2>Misiunea universitatii</h2>
+      <p>Misiunea Universității "Vasile Alecsandri" din Bacău este de a oferi o educație de calitate, de a promova
+        cercetarea și inovarea și de a contribui la dezvoltarea socio-economică a regiunii și a țării în ansamblu.
+        Universitatea își propune să ofere studenților săi oportunități de învățare și dezvoltare personală, să
+        promoveze valorile culturale și educaționale și să contribuie la dezvoltarea unei societăți bazate pe
+        cunoaștere, creativitate și inovare.</p>
+    </section>
+    </main>
   </div>
+  <footer>
+    <p>Copyright &copy; Universitatea "Vasile Alecsandri" Bacau</p>
+  </footer>
+</body>
 
-
-{% endblock %}
+</html>

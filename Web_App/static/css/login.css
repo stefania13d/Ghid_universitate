@@ -1,0 +1,42 @@
+.btn{
+    color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.header1 {
+    font-size: 80px;
+    color: white;
+}
+
+.header2 {
+    font-size: 30px;
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.container {
+    width:600px;
+    height: 800px;
+    margin-right: 350px;
+    border: 1px;
+    text-align: center;
+}
+
+.border_class{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+}
+.border_c{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+}

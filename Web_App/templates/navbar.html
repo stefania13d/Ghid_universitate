@@ -1,40 +1,50 @@
-<section class="header-middle d-print-none full-width" style="font-size: 14px;"></section>
-<nav class="navbar navbar-inverse navbar-expand-lg" id="navbar">
-    <div class="container-fluid" style="font-size: 14px;">
-            <div class="col-md-2  logo-holder" style="font-size: 14px;">
-                <div class="header-logo" style="font-size: 14px;">
-                    <a href="/index" style="font-size: 14px;">
+
+<section class="header-middle d-print-none full-width" style="font-size: 15px;">
+<nav class="navbar navbar-inverse navbar-expand-lg" id="top-nav-bar">
+    <div class="container-fluid" style="font-size: 15px;">
+            <div class="col-md-2  logo-holder" style="font-size: 15px;">
+                <div class="header-logo" style="font-size: 15px;">
+                    <a href="/index" style="font-size: 15px;">
                         <img src="https://www.ub.ro/frontend/assets/identity/logo.svg?ver=0.1" height="50" width="100"
-                            alt="Universitatea „Vasile Alecsandri” din Bacău" style="font-size: 13px;">
-                        <p style="font-size: 13px;">Universitatea „Vasile Alecsandri” din Bacău</p>
+                            alt="Facultatea de Inginerie" style="font-size: 13px;">
+                        <p style="font-size: 15px; color: white;">Universitatea „Vasile Alecsandri”</p>
                     </a>
                 </div>
         </div>
     </div>
     <ul class="nav navbar-nav"> <!-- Modified this line -->
+        {% include 'set_language.html' %}
+        <div class="button, button-container">
         {% if user.is_authenticated %}
-        <button type="button" class="btn btn-outline-primary, nav-item"><a class="nav-link" href="/logout"> Logout</a></button>
-        {% else %}
-        <button type="button" class="btn btn-outline-primary, nav-item">
-            <a class="nav-link" href="/sign-up">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16" style="margin-right: 5px;">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                </svg>
-                Sign Up
+        <button type="button" id="button3" class="btn btn-outline-info, my-2 my-sm-0, nav-item" title="Logout" aria-label="Logout" style="border-radius: 25px;">
+            <a class="nav-link" href="/logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-door-closed" viewBox="0 0 16 16">
+                    <path d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3zm1 13h8V2H4z"/>
+                    <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0"/>
+                  </svg>
+                  <span style="font-size: 21px; color: white; margin-top: -10px;">Logout</span>
             </a>
         </button>
-        <button type="button" class="btn btn-outline-primary, nav-item">
+        {% else %}
+        <button type="button" id="button2" class="btn btn-outline-info my-2 my-sm-0, nav-item" title="Sign Up to Improve Your Learning Experience" aria-label="Sign Up to Improve Your Learning Experience" style="border-radius: 25px;">
+            <a class="nav-link" href="/sign-up">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-person" viewBox="0 0 16 16" style="margin-right: 5px;">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+                <span style="font-size: 21px; color: white; margin-top: -10px;">Sign Up</span>
+            </a>
+        </button>
+        <button type="button" id="button1" class="btn btn-outline-info my-2 my-sm-0, nav-item" title="Login to your account" aria-label="Login to your account" style="border-radius: 25px;">
             <a class="nav-link" href="/login" > 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
                     <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
                   </svg>
-                 Login
+                <span style="font-size: 21px; color: white; margin-top: -10px;">Login</span>
                 </a>
         </button>
         {% endif %}
-    </ul>
-    </svg>
     </div>
+    </ul>
 </nav>
 </section>

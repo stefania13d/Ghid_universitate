@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} 
 {% block content %}
-  <form method="POST">
-    <h3 align="center">Sign Up</h3>
+  <form method="POST" class="border_class">
+    <h1 class="header1" align="center">Sign Up</h1>
     <div class="form-group">
-      <label for="email">Email Address</label>
+      <label for="email" class="header2">Email Address</label>
       <input
         type="email"
         class="form-control"
@@ -13,7 +13,7 @@
       />
     </div>
     <div class="form-group">
-      <label for="firstName">First Name</label>
+      <label for="firstName" class="header2">First Name</label>
       <input
         type="text"
         class="form-control"
@@ -23,7 +23,7 @@
       />
     </div>
     <div class="form-group">
-      <label for="password1">Password</label>
+      <label for="password1" class="header2">Password</label>
       <input
         type="password"
         class="form-control"
@@ -33,7 +33,7 @@
       />
     </div>
     <div class="form-group">
-      <label for="password2">Password (Confirm)</label>
+      <label for="password2" class="header2">Password (Confirm)</label>
       <input
         type="password"
         class="form-control"
@@ -43,6 +43,6 @@
       />
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button id="btn" type="submit" class="btn btn-primary">Submit</button>
   </form>
   {% endblock %}

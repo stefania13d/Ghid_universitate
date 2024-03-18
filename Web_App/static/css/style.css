@@ -1,46 +1,62 @@
 .navbar {
-    background-color:#38a8f8;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  background-color: rgba(65, 150, 219, 0.7);
+  height: 120px;
+  /* Adjust the value to make the navbar taller */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 body {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/imagini/inginerie.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    height: 600px;
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px; /* Adjust the value to move the image down */
-    
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.560), rgba(0, 0, 0, 0.560)), url("/static/imagini/universitatea-vasile-alecsandri-bacau.jpg");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height: 1150px;
+  width: 1800px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 100px;
+  /* Adjust the value to move the image down */
+
 }
 
-h1 {
-    font-size: 100px; 
-    color: rgb(255, 255, 255);/* or any size you prefer */
-  }
-  
-p {
-    font-size: 40px; 
-    color: rgb(255, 255, 255);/* or any size you prefer */
-  }
-
-.h-text button {
-    background-color: #0060df;
-    color: white;
-    margin-top: 16px ;
-    border: none;
-    cursor: pointer;
-    width: 20%;
-    padding: 10px 20px;
-    font-size: 16px;
+.button-container {
+  display: flex;
 }
+
+
+.button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  padding: 14px 28px;
+  font-size: 25px;
+}
+
+.button:hover {
+  background-color: rgb(118, 155, 255);
+}
+
+.button3{
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  padding: 14px 28px;
+  font-size: 25px;
+}
+
+.button3:hover {
+  background-color: rgb(118, 155, 255);
+}
+
+
 
 

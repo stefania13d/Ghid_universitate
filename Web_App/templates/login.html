@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
   %}
-  <form method="POST">
-    <h3 align="center">Login</h3>
+  <form method="POST" class="border_c">
+    <h1 class="header1" align="center">Login</h1>
     <div class="form-group">
-      <label for="email">Email Address</label>
+      <label for="email" class="header2">Email Address</label>
       <input
         type="email"
         class="form-control"
@@ -13,16 +13,16 @@
       />
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password" class="header2">Password</label>
       <input
         type="password"
-        class="form-control"
+        class="form-control""
         id="password"
         name="password"
         placeholder="Enter password"
       />
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button id="btn" type="submit" class="btn btn-primary">Login</button>
   </form>
   {% endblock %}
