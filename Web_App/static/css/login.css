@@ -1,9 +1,10 @@
 .btn{
     color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
 }
+
 
 .header1 {
     font-size: 80px;
@@ -40,3 +41,193 @@
     border-radius: 20px;
     padding: 30px;
 }
+
+h1 {
+    font-size: 89px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: azure;
+  }
+
+  h2 {
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: azure;
+  }
+
+  #introducere {
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+    
+  }
+
+  #istorie {
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+  }
+
+  #istorie h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  #inginerie {
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+  }
+
+  #inginerie h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  #misiune {
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+  }
+
+  #misiune h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  footer {
+    background-color: rgba(16, 118, 202, 0.1);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+  }
+
+  #read-more-btn {
+    display: block;
+          
+  }
+
+  #istorie {
+    
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+  }
+
+  #istorie h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  #inginerie {
+   
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+   
+  }
+
+  #inginerie h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  #misiune {
+   
+    color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    
+  }
+
+  #misiune h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+  }
+
+  footer {
+    background-color: rgba(16, 118, 202, 0.1);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+  }
+
+  #read-more-btn {
+    display: block;
+    background-color: #4259be;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .hidden-content {
+    display: none;
+    margin-top: 100px;
+  }
+
+  #top-left-text {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 23px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: white;
+  }
+
+  #center {
+    text-align: center;
+    margin-top: -60px;
+  }
+
+  #center h1 {
+    margin-bottom: 20px;
+  }
+
+  #hidden-content {
+    margin-top: -20px;
+    justify-content: center;
+
+  }
+
+  .d-flex {
+    align-items: center;
+
+
+  }

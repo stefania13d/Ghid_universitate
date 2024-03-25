@@ -1,16 +1,14 @@
-from flask import Flask, render_template, session, url_for
+from flask import Flask, render_template, session, url_for, redirect
 from Web_App import create_app
 from flask_babel import Babel, gettext as _
 from flask import redirect
-import sys
+from flask_bootstrap import Bootstrap
 import os
-import locale
-
-app = Flask(__name__, static_url_path='/static')
-app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs' 
-babel = Babel(app)
 
 app = create_app()
+
+babel = Babel(app)
+bootstrap = Bootstrap(app)
 
 @app.route('/index')
 def index():
@@ -28,6 +26,9 @@ def before_request():
     if 'language' in session:
         app.config['BABEL_DEFAULT_LOCALE'] = session['language']
 
+@app.route('/more-info')
+def more_info():
+    return render_template('more-info.html')
 
 @app.context_processor
 def context_processor():
@@ -37,7 +38,14 @@ def context_processor():
         {'name': 'Romanian', 'code': 'ro'},
         {'name': 'Français', 'code': 'fr'},
     ]
-    return dict(languages=languages)
+    departments = [
+        {"id": 1, "name": "Departamentul Ingineria Mediului, Inginerie Mecanică si Agroturism"},
+        {"id": 2, "name": "Departamentul Inginerie şi Management, Mecatronică"},
+        {"id": 3, "name": "Departamentul Ingineria şi Managementul Sistemelor Industriale"},
+        {"id": 4, "name": "Departamentul de Energetică şi Stiinţa Calculatoarelor"},
+        {"id": 5, "name": "Departamentul Inginerie Chimică şi Alimentară"}
+    ]
+    return dict(languages=languages, departments=departments)
 
 # Configure Babel
 app.config['BABEL_TRANSLATION_DIRECTORIES'] = os.path.join(os.path.dirname(__file__), 'translations')
